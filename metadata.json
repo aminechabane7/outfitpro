@@ -1,0 +1,7 @@
+{
+  "name": "Outfit Studio Pro",
+  "description": "A high-end virtual try-On application for testing outfits on various models with AI-enhanced customization settings.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

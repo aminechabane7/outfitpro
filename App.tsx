@@ -860,15 +860,17 @@ const App: React.FC = () => {
 
         {activeModalItem && (
           <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300">
-            <div className="relative w-full max-w-2xl bg-white rounded-[40px] overflow-hidden shadow-2xl flex flex-col h-[85vh]">
+            <div className="relative w-full max-w-2xl bg-white rounded-[40px] shadow-2xl flex flex-col h-[85vh]">
               <button onClick={() => setActiveModalItem(null)} className="absolute top-6 right-6 z-20 w-10 h-10 bg-black/30 text-white rounded-full flex items-center justify-center backdrop-blur-md hover:bg-black/50 transition-colors"><X size={20} /></button>
               
-              <div className="flex-1 overflow-hidden bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGAQYcAP3MhQhc6EKEbGAAYY4P8MAnH7wSByWJChKp0J0YyMAQwwwAA8ixAiTXY6VAAAAABJRU5ErkJggg==')] bg-repeat relative flex items-center justify-center h-full p-4">
+              <div className="flex-1 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGAQYcAP3MhQhc6EKEbGAAYY4P8MAnH7wSByWJChKp0J0YyMAQwwwAA8ixAiTXY6VAAAAABJRU5ErkJggg==')] bg-repeat relative flex items-center justify-center p-4 min-h-0">
+                <div className="w-full h-full flex items-center justify-center">
                 <img 
                   src={activeModalItem.url} 
                   className="max-w-full max-h-full object-contain relative z-10 shadow-2xl" 
                   alt="Generated result" 
                 />
+                </div>
               </div>
 
               <div className="p-8 flex items-center justify-between bg-white border-t border-gray-100 relative z-20">
